@@ -12,7 +12,7 @@ const capitalizeFirstChar = (key: string) => {
   return `${key.charAt(0).toUpperCase()}${key.slice(1)}`;
 };
 
-export const isValidJSON = (item: string) => JSON_REGEX.test(item);
+const isValidJSON = (item: string) => JSON_REGEX.test(item);
 
 export default function Home() {
   const [error, setError] = useState("");
