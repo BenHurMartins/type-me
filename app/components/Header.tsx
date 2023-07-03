@@ -1,17 +1,13 @@
 "use client";
 import { useState } from "react";
+import BuyMeACoffeeButton from "./BuyMeACoffeeButton";
 
 const Header = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
 
   return (
     <header>
-      {/* <div className="p-6">
-      <a>
-        <span className="text-white text-2xl cursor-pointer">TYPE ME</span>
-      </a>
-    </div> */}
-      <nav className="flex items-center justify-between flex-wrap p-6">
+      <nav className="flex items-center justify-between flex-wrap p-6 border-b">
         <div className="flex items-center flex-shrink-0 text-white mr-6">
           <span className="text-white text-2xl cursor-pointer">TYPE ME</span>
         </div>
@@ -40,14 +36,13 @@ const Header = () => {
             navbarOpen ? " flex" : " hidden"
           }`}
         >
-          <div className="flex text-sm flex-grow justify-end border-b p-2">
+          <div className="flex text-sm flex-grow items-end p-2 flex-col md:flex-row md:justify-end">
             <a
-              href="#responsive-header"
+              href="https://github.com/BenHurMartins/type-me"
               className="flex mt-4  md:mt-0 hover:text-gray-200 mr-4 flex-row gap-2 items-center"
             >
               <svg
                 className="fill-current h-6 w-6"
-                // viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
@@ -58,6 +53,7 @@ const Header = () => {
               </svg>
               Github
             </a>
+            {/* <BuyMeACoffeeButton /> */}
           </div>
         </div>
       </nav>
