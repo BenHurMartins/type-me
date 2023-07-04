@@ -41,6 +41,9 @@ export default function Home() {
 
   const getType = (entry: Record<string, any>, typeName?: string) => {
     const result: string = Object.keys(entry).reduce((acc, curr) => {
+      if (entry[curr] === null) {
+        return `${acc} ${curr}: any | null;`;
+      }
       if (Array.isArray(entry[curr])) {
         if (entry[curr].length > 0) {
           if (typeof entry[curr][0] === "object") {
@@ -87,7 +90,7 @@ export default function Home() {
             }}
           ></textarea>
         </section>
-        {error && <div>{<span className="text-white">{error}</span>}</div>}
+        {error && <div>{<span className="text-rose-500">{error}</span>}</div>}
         <section className="w-full flex justify-center flex-col gap-8">
           {types.map((t) => {
             return (
