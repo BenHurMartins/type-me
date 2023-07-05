@@ -1,0 +1,2 @@
+export const INITIAL_JSON =
+  '{\n\t"name": "Ben",\n\t"age":32,\n\t"address": {\n\t\t"street":"some street",\n\t\t"number": 13 \n\t},\n\t"isAlive": true,  \n\t"height": 1.75,\n\t"favoriteFruits": ["apple", "banana"],\n\t"favoriteGames":[\n\t\t{ \n\t\t\t"name": "The last of us", \n\t\t\t"year": 2013 \n\t\t},    \n\t\t{ \n\t\t\t"name": "The last of us 2", \n\t\t\t"year": 2020 \n\t\t}\n\t],\n\t"pastNames": []}';
