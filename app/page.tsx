@@ -42,7 +42,7 @@ export default function Home() {
   const getType = (entry: Record<string, any>, typeName?: string) => {
     const result: string = Object.keys(entry).reduce((acc, curr) => {
       if (entry[curr] === null) {
-        return `${acc} ${curr}: any | null;`;
+        return `${acc} ${curr}: any;`;
       }
       if (Array.isArray(entry[curr])) {
         if (entry[curr].length > 0) {
