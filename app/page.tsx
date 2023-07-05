@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import myJSON from "./test.json";
+import { INITIAL_JSON } from "./test";
 import Disclaimer from "./components/Disclaimer";
 import { NextSeo } from "next-seo";
 
@@ -16,7 +16,8 @@ const isValidJSON = (item: string) => JSON_REGEX.test(item);
 
 export default function Home() {
   const [error, setError] = useState("");
-  const [textfield, setTextField] = useState(JSON.stringify(myJSON));
+  const [textfield, setTextField] = useState(INITIAL_JSON);
+
   const [types, setTypes] = useState<string[]>([]);
 
   useEffect(() => {
@@ -26,7 +27,7 @@ export default function Home() {
 
   const parseObject = () => {
     try {
-      if (!isValidJSON(textfield)) {
+      if (!isValidJSON(textfield.replaceAll("\n", ""))) {
         setError("JSON is not valid");
         return;
       }
