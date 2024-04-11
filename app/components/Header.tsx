@@ -1,6 +1,12 @@
 "use client";
 import { useState } from "react";
 import BuyMeACoffeeButton from "./BuyMeACoffeeButton";
+import Hotjar from "@hotjar/browser";
+
+const siteId = 4941525;
+const hotjarVersion = 6;
+
+Hotjar.init(siteId, hotjarVersion);
 
 const Header = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
