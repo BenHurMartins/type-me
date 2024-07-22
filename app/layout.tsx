@@ -2,12 +2,6 @@ import Header from "./components/Header";
 import "./globals.css";
 import { Inter } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
-import Hotjar from "@hotjar/browser";
-
-const siteId = 4941525;
-const hotjarVersion = 6;
-
-Hotjar.init(siteId, hotjarVersion);
 
 const inter = Inter({ subsets: ["latin"] });
 
